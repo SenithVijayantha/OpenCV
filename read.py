@@ -1,6 +1,23 @@
 import cv2 as cv
 
-img = cv.imread('Resources/Photos/cat_large.jpg') # read image
-cv.imshow('Cat', img) # display the image
+# read image
+# img = cv.imread('Resources/Photos/cat_large.jpg')
 
-cv.waitKey(0) # Open up the window for infinite time
+# display the image
+# cv.imshow('Cat', img) 
+
+# reading videos
+capture = cv.VideoCapture('Resources/Videos/dog.mp4')
+
+while True:
+    isTrue, frame = capture.read()
+    cv.imshow('Video', frame)
+
+    if cv.waitKey(20) & 0xFF==ord('d'):
+        break
+
+capture.release()
+cv.destroyAllWindows()     
+
+# Open up the window for infinite time
+# cv.waitKey(0)
