@@ -21,3 +21,5 @@ cv.destroyAllWindows()
 
 # Open up the window for infinite time
 # cv.waitKey(0)
+
+# Most of the time The error (-215:Assertion failed) happens when OpenCV can't find the specified file
